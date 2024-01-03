@@ -7,16 +7,16 @@ const dirPath = path.join(__dirname, 'files');
 console.log(dirPath)
 
 // create file in the 
-for(let i=0;i<5;i++)
-{
-    fs.writeFileSync(`${dirPath}/ hello${i}.txt`,"some simple text in file")
-}
-
-
-// fs.readdir(dirPath,(err,files)=>{
-//     files.forEach((item)=>{
-//         console.warn("file name is : ",item)
-//     });
+// for(let i=0;i<5;i++)
+// {
+//     fs.writeFileSync(`${dirPath}/ hello${i}.txt`,"some simple text in file")
 // }
-// )
+
+// below code just show all the files name that are in the folder  
+fs.readdir(dirPath,(err,files)=>{
+    files.forEach((item)=>{
+        console.warn("file name is : ",item)
+    });
+}
+)
 
