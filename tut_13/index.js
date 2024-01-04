@@ -1,7 +1,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const dirPath = path.join(__dirname, 'files');
+const dirPath = path.join(__dirname,'files');
 
 // this give the path of the file 
 console.log(dirPath)

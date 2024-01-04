@@ -1,6 +1,5 @@
 // the below line give us output 'junaid'
 // node index.js junaid
-
 // console.log(process.argv[2])
 
 const fs = require('fs');
