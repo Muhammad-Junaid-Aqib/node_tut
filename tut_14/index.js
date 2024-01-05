@@ -27,11 +27,24 @@ const filePath = `${dirPath}/fileNames.txt`
 //     if(!err) console.log('file is update successfully')
 // })
 
-//
+
+// change the file name
+// first parameter is the file path
+// second parameter is the new file path and file name
+
 // fs.rename(filePath, `${dirPath}/fileNames.txt`, (err) => {
 //   if(!err) console.log('file name is updated')
 // })
 
 
 // delete the the file that are on filepath
+
 // fs.unlinkSync(filePath)
+
+
+//Buffer : means temporary memory location
+// jb b hum file create karta hai, koi b operation perform karta hai
+// file system k uper
+//  node ko thori si memory/space chya hoti hai
+//  js p wo apna operation perform kar ska
+// us space/memory ko hum buffer khata hai.
