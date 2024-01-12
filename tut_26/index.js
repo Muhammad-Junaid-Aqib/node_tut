@@ -23,9 +23,8 @@
 // third-party middleware
 
 const express = require('express')
+
 const app = express()
-
-
 
 const reqFilter = (req, res, next) => {
     if (!req.query.age) {
@@ -37,7 +36,7 @@ const reqFilter = (req, res, next) => {
     }
 }
 
-app.use(reqFilter)
+// app.use(reqFilter)
 
 app.get('/', (req, res) => {
     // console.log('Home Page');
@@ -49,8 +48,13 @@ app.get('/user', (req, res) => {
     res.send('User Page')
 })
 
-app.listen(5000)
+// For Specific route
+// for specific route we hide or don't use app.use(middleware_Name)
+// middleware apply only on this below rout
+// second parameter is the middleware (e.g reqFilter is middle)
+app.get('/about', reqFilter, (req, res) => {
+    // console.log('Home Page');
+    res.send('About Page')
+})
 
-
-
-
+app.listen(5000) 
